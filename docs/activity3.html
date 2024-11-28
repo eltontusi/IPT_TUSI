@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Data Form</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+.header {
+    position: relative;
+    height: 150px; /* Added height to prevent overlap */
+}
+
+h1 {
+    font-size: 50px; /* Adjusted heading size */
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 150px;
+    font-weight: 900; 
+}
+
+.image-placeholder {
+    width: 160px;
+    height: 160px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-bottom: 0px;
+}
+
+.section {
+    margin-top: 30px; /* Space after the header */
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Border for each section */
+    padding: 15px; /* Padding inside each section */
+    border-radius: 5px; /* Rounded corners for sections */
+    background-color: #fafafa; /* Light background for sections */
+}
+
+.section h2 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px; /* Adjusted section heading size */
+}
+
+.row {
+    display: flex;
+    align-items: center; /* Aligns items vertically center */
+    margin-bottom: 5px; /* Reduced space between rows */
+}
+
+label {
+    width: 200px; /* Fixed width for labels */
+    margin-right: 5px; /* Space between label and input */
+    font-size: 12px; /* Smaller font size for labels */
+}
+
+input {
+    flex: 1; /* Allows the input field to take up remaining space */
+    padding: 2px 0; /* Adjust padding for top and bottom only */
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #000; /* Add a bottom border to create a line effect */
+    outline: none; /* Remove outline on focus */
+    font-size: 12px; /* Smaller font size for input fields */
+}
+
+/* Styling for the specific fields to be one line each */
+.one-line {
+    flex: 1; /* Take up remaining space on the line */
+}
+
+input:focus {
+    border-bottom: 1px solid #007BFF; /* Change bottom border color on focus */
+}
+
+.disclaimer {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.signature {
+    text-align: right;
+}
+
+.additional-info {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the two sections */
+    margin-top: 30px; /* Space above the additional info section */
+}
+
+.left-info {
+    width: 60%; /* Width for the left section */
+}
+
+.right-info {
+    width: 35%; /* Width for the right section */
+    padding-left: 20px; /* Space between the two sections */
+}
+
+.right-info h2 {
+    margin-bottom: 10px; /* Margin for the section heading */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BIO-DATA</h1>
+            <div class="image-placeholder">
+                <p>Photo</p>
+            </div>
+        </div>
+
+        <div class="section personal-data">
+            <h2>PERSONAL DATA</h2>
+            <div class="row">
+                <label>Position Desired:</label>
+                <input type="text">
+                <label>Date:</label>
+                <input type="text" class="date-input">
+            </div>
+            <div class="row">
+                <label>Name:</label>
+                <input type="text">
+                <label>Gender:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>City Address:</label>
+                <input type="text" class="one-line">
+            </div>
+            <div class="row">
+                <label>Provincial Address:</label>
+                <input type="text" class="one-line">
+            </div>
+            <div class="row">
+                <label>Cellphone:</label>
+                <input type="text">
+                <label>Telephone:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Email Address:</label>
+                <input type="email">
+                <label>Birthplace:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Date of Birth:</label>
+                <input type="text" class="date-input">
+                <label>Civil Status:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Height:</label>
+                <input type="text">
+                <label>Weight:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Religion:</label>
+                <input type="text">
+                <label>Citizenship:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Spouse:</label>
+                <input type="text">
+                <label>Occupation:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Name of Children:</label>
+                <input type="text">
+                <label>Date of Birth:</label>
+                <input type="text" class="date-input">
+            </div>
+            <div class="row">
+                <label>Father's Name:</label>
+                <input type="text">
+                <label>Occupation:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Mother's Name:</label>
+                <input type="text">
+                <label>Occupation:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Language spoken and written:</label>
+                <input type="text" class="one-line">
+            </div>
+            <div class="row">
+                <label>Person to be contacted in case of emergency:</label>
+                <input type="text" class="one-line">
+            </div>
+            <div class="row">
+                <label>His or her address and telephone:</label>
+                <input type="text" class="one-line">
+            </div>
+        </div>
+
+        <div class="section education">
+            <h2>EDUCATIONAL BACKGROUND</h2>
+            <div class="row">
+                <label>Elementary:</label>
+                <input type="text">
+                <label>Year Graduated:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>High School:</label>
+                <input type="text">
+                <label>Year Graduated:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>College:</label>
+                <input type="text">
+                <label>Year Graduated:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Degree Received:</label>
+                <input type="text" class="one-line">
+            </div>
+            <div class="row">
+                <label>Special Skills:</label>
+                <input type="text" class="one-line">
+            </div>
+        </div>
+
+        <div class="section employment">
+            <h2>EMPLOYMENT RECORD</h2>
+            <div class="row">
+                <label>Company Name:</label>
+                <input type="text" class="one-line">
+            </div>
+            <div class="row">
+                <label>Position:</label>
+                <input type="text">
+                <label>From:</label>
+                <input type="text" class="date-input">
+                <label>To:</label>
+                <input type="text" class="date-input">
+            </div>
+
+            <div class="row">
+                <label>Company Name:</label>
+                <input type="text" class="one-line">
+            </div>
+            <div class="row">
+                <label>Position:</label>
+                <input type="text">
+                <label>From:</label>
+                <input type="text" class="date-input">
+                <label>To:</label>
+                <input type="text" class="date-input">
+            </div>
+        </div>
+
+        <div class="section character">
+            <h2>CHARACTER REFERENCE</h2>
+            <div class="row">
+                <label>Name:</label>
+                <input type="text">
+                <label>Company:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Position:</label>
+                <input type="text">
+                <label>Contact No.:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Name:</label>
+                <input type="text">
+                <label>Company:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>Position:</label>
+                <input type="text">
+                <label>Contact No.:</label>
+                <input type="text">
+            </div>
+        </div>
+        
+        <div class="section additional-info">
+            <div class="left-info">
+                <div class="row">
+                    <label>Res. Cert. No.:</label>
+                    <input type="text" class="one-line">
+                </div>
+                <div class="row">
+                    <label>Issued at:</label>
+                    <input type="text" class="one-line">
+                </div>
+                <div class="row">
+                    <label>Issued on:</label>
+                    <input type="text" class="one-line">
+                </div>
+                <div class="row">
+                    <label>SSS:</label>
+                    <input type="text" class="one-line">
+                </div>
+                <div class="row">
+                    <label>TIN:</label>
+                    <input type="text" class="one-line">
+                </div>
+                <div class="row">
+                    <label>NBI No.:</label>
+                    <input type="text" class="one-line">
+                </div>
+                <div class="row">
+                    <label>Passport No.:</label>
+                    <input type="text" class="one-line">
+                </div>
+            </div>
+            <div class="right-info">
+                <center>
+                <p><small>I hereby certify the above information is true and correct to the best of my knowledge and belief. I also understand that any misinterpretation will be considered reason for withdrawal of an offer or subsequent dismissal if employed.</small></p>
+                    <p><small>______________________</small></p>
+                    <p><small>Applicant Signature</small></p>
+                </center>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

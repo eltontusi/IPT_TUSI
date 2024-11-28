@@ -1,0 +1,218 @@
+/* Complete CSS Example */
+/* Define custom properties for background colors */
+:root {
+    --nav-background-color: #cb5482; /* Default navigation background color */
+    --nav-color: rgb(255, 255, 255); /* Default navigation link color */
+    --nav-hover-color: #ff7d7d; /* Default hover color for navigation links */
+    --nav-active-color: #a7a171; /* Default active (clicked) color for navigation links */
+    --page-background: linear-gradient(to bottom, #ff6ad2, #ff9898); /* Default gradient background */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--page-background); /* Apply gradient background */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    background-size: cover; /* Ensure the gradient covers the entire viewport */
+    min-height: 100vh; /* Minimum height to ensure it covers the viewport */
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--nav-background-color); /* Use custom property for nav background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added drop shadow */
+}
+
+.logo img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-port {
+    background-color: #e0e0e0; /* Placeholder background color */
+    border: 1px solid #ccc; /* Border for the image port */
+    height: 150px; /* Fixed height for consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-port img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    max-height: 100%; /* Ensure the image does not exceed the container height */
+    object-fit: cover; /* Cover the space without stretching */
+}
+
+/* Define custom properties for navigation colors */
+:root {
+    --nav-background-color: #cb5482; /* Default navigation background color */
+    --nav-color: rgb(255, 255, 255); /* Default navigation link color */
+    --nav-hover-color: #ff7d7d; /* Default hover color for navigation links */
+    --nav-active-color: #a7a171; /* Default active (clicked) color for navigation links */
+}
+
+/* Align navigation to the right and add spacing between links and the menu */
+nav {
+    display: flex;
+    margin-left: auto;
+    gap: 30px; /* Space between each navigation link */
+    margin-right: 20px; /* Add space between navigation and burger button */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-color); /* Use custom property for link color */
+    font-size: 16px;
+    padding: 10px 15px; /* Add padding for the rounded effect */
+    background-color: transparent; /* Default background color */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Change background color on hover and when active */
+nav a:hover {
+    background-color: var(--nav-hover-color); /* Use custom property for hover color */
+}
+
+nav a.active {
+    background-color: var(--nav-active-color); /* Use custom property for active color */
+    color: white; /* Change text color for better contrast */
+}
+
+/* Smaller square container for the burger menu */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu button.burger-menu {
+    background-color: #ff9d9d; /* Container background color */
+    border: none;
+    width: 35px; /* Smaller square container width */
+    height: 35px; /* Smaller square container height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add some space between button and navigation */
+}
+
+.menu button.burger-menu .bar {
+    width: 20px; /* Reduced width for smaller appearance */
+    height: 3px; /* Reduced height for thinner bars */
+    background-color: white; /* White bars */
+    border-radius: 2px;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+}
+
+.left-content, .right-content {
+    flex: 1;
+    padding: 10px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-content .image-port {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+/* Flexbox for right-content to align title and button */
+.right-content {
+    display: flex; /* Use flexbox for right-content */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Space between title and description box */
+}
+
+.header-title {
+    display: flex; /* Use flexbox to align title and button */
+    justify-content: space-between; /* Space between title and button */
+    align-items: center; /* Align items vertically */
+}
+
+.right-content h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 48px; /* Increased font size for the title */
+    color: #ffffff; /* Use custom property for color */
+    font-weight: bold; /* Make the title bold */
+}
+
+.header-title {
+    display: flex; /* Ensure header title uses flexbox */
+    justify-content: space-between; /* Space between title and circle image */
+    align-items: center; /* Align items vertically */
+}
+
+.circle-image-port {
+    width: 150px; /* Increased size */
+    height: 150px; /* Increased size */
+    border-radius: 50%; /* Keep it circular */
+    overflow: hidden; /* Ensure image doesn't exceed the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* For positioning the animation */
+    animation: pulse 1.5s infinite; /* Add animation */
+    margin-left: 20px; /* Move the circle a little to the left */
+}
+
+.go-image {
+    width: 100%; /* Make the image take the full width of the circle */
+    height: 100%; /* Make the image take the full height of the circle */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.circle-image-port:hover .go-image {
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 rgba(93, 248, 183, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.6); /* Adjust color and size as needed */
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+
+.right-content .description-box {
+    width: 97%;
+    background-color: #ffffff65; /* Semi-transparent background color */
+    padding: 10px;
+    margin-top: 5px; /* Adjust this value to move the description box lower */
+    display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+    gap: 15px; /* Space between paragraphs */
+    text-align: justify; /* Justify text for better readability */
+    border-radius: 20px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(194, 255, 115, 0.2); /* Add drop shadow */
+}
+
+.description-box p {
+    margin: 0; /* Remove default margin from paragraphs */
+    line-height: 1.6; /* Increase line height for better readability */
+}
+

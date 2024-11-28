@@ -1,0 +1,406 @@
+/* styles.css */
+:root {
+    --nav-background-color: #f0689c; /* Default navigation background color */
+    --nav-color: rgb(255, 255, 255); /* Default navigation link color */
+    --nav-hover-color: #f5c288; /* Default hover color for navigation links */
+    --nav-active-color: #f5c288; /* Default active (clicked) color for navigation links */
+    --page-background: linear-gradient(to bottom, #ff6ad2, #ff9898); /* Default gradient background */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--page-background); /* Apply gradient background */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    background-size: cover; /* Ensure the gradient covers the entire viewport */
+    min-height: 100vh; /* Minimum height to ensure it covers the viewport */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--nav-background-color); /* Use custom property for nav background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added drop shadow */
+}
+
+.logo img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Align navigation to the right and add spacing between links and the menu */
+nav { 
+    display: flex;
+    margin-left: auto;
+    gap: 30px; /* Space between each navigation link */
+    margin-right: 20px; /* Add space between navigation and burger button */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-color); /* Use custom property for link color */
+    font-size: 16px;
+    padding: 10px 15px; /* Add padding for the rounded effect */
+    background-color: transparent; /* Default background color */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Change background color on hover */
+nav a:hover {
+    background-color: var(--nav-hover-color); /* Use custom property for hover color */
+}
+
+nav a.active {
+    background-color: var(--nav-active-color); /* Active background color */
+    color: var(--nav-color); /* Active text color */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Height adjusts based on content */
+    min-height: 80vh; /* Ensures full viewport height at minimum */
+}
+  
+.circle {
+  position: relative;
+  width: 425px;
+  height: 425px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 70px;  
+  padding-left: 25px; 
+  overflow: hidden; /* Ensures anything outside the circle is hidden */
+  border-radius: 50%; /* Makes the container a perfect circle */
+}
+
+.circle img {
+  width: auto; /* Automatically adjusts width to maintain aspect ratio */
+  height: auto; /* Automatically adjusts height to maintain aspect ratio */
+  max-width: 100%; /* Ensures the image does not exceed container width */
+  max-height: 100%; /* Ensures the image does not exceed container height */
+} 
+  
+  .content {
+    text-align: left;
+    max-width: 500px; /* Adjust the max-width value as needed */
+    padding: 20px; /* Optional padding for spacing */
+  }
+  
+  .content h1 {
+    margin: 0;
+    font-size: 47px;
+    color: white;
+  }
+  
+  .content p {
+    margin: 10px 0;
+    font-size: 17px;
+    color: white;
+    padding-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .button-primary {
+    background-color: #db6999; /* Primary button color */
+  }
+  
+  .button-secondary {
+    background-color: #bbb886; /* Secondary button color */
+  }
+  
+  .container-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .container {
+    width: 260px;
+    height: 160px; /* Adjust height to ensure enough space for text */
+    padding: 20px;
+    background-color: rgba(199, 121, 157, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative; /* Allows positioning of the image outside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Keeps the container behind the image */
+    overflow: visible; /* Allow the image to be outside the container */
+  }
+  
+  /* Container text styles */
+  .container h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 60px; /* Adjust this value to keep text below the image */
+    margin-bottom: 10px;
+  }
+  
+  .container p {
+    font-size: 14px;
+    color: #e6e6e6;
+  }
+  
+  /* Hover effect on containers */
+  .container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(229, 255, 0, 0.3);
+    background-color: rgba(192, 97, 156, 0.8);
+  }
+  
+  /* Image container positioned outside the container, in front */
+  .image-container {
+    position: absolute;
+    top: -45px; /* Position the image above the container */
+    left: 0;
+    width: 100%;
+    height: 120px; /* Adjust the height of the image */
+    z-index: 2; /* Ensure the image is above the container */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Ensure the image fills the container */
+  .image-container img {
+    width: 80%;
+    height: 90%;
+    transition: transform 0.3s ease; /* Smooth transition for image */
+  }
+  
+  /* Hover effect for the image when the container is hovered */
+  .container:hover .image-container img {
+    transform: scale(1.2); /* Zoom in the image when hovering */
+  }
+  
+/* Main content styles */
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: rgba(199, 121, 157, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 20px;
+}
+
+.profile-picture {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 2;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.info-grid label {
+  font-weight: bold;
+  color: rgb(156, 66, 66);
+}
+
+.about-me {
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.about-me label {
+  font-weight: bold;
+  color: rgb(156, 66, 66);
+}
+
+.about-me p {
+  line-height: 1.6;
+  text-align: justify; /* This will justify the text */
+  padding-right: 25px;
+}
+
+/* Contact Card */
+.contact-card {
+  background: rgba(214, 177, 144, 0.808);
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  margin-left: 60px;
+}
+
+.contact-info > div {
+  display: flex;
+  align-items: center; /* Vertically aligns label and address */
+  gap: 37px;
+  margin-top: 25px; /* Adds space between rows */
+  color: white; /* Ensures text color is white for the entire contact info */
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px !important; /* Increased gap to make sure it applies */
+  align-items: center;
+  justify-content: flex-start;
+  color: white !important;
+}
+
+.contact-row label {
+  font-weight: bold;
+  color: rgb(129, 50, 50); /* Custom color for labels */
+}
+
+.contact-info label {
+  font-weight: bold;
+  color: rgb(129, 50, 50); /* Custom color for labels */
+}
+
+.contact-info p {
+  margin: 0; /* Remove extra margin around paragraphs */
+}
+
+/* Styling for the main container */
+.carousel-section {
+  text-align: center; /* Centers the content inside */
+  padding-top: 20px; /* Space from the top */
+  display: flex;
+  flex-direction: column; /* Ensures that content inside is arranged vertically */
+  align-items: center; /* Centers the content horizontally */
+}
+
+/* Styling for the title */
+.carousel-title {
+  font-size: 1.6em;
+  font-weight: regular;
+  color: #ffffff;
+  margin-bottom: 20px; /* Space between title and carousel */
+  display: block; /* Ensure the title behaves like a block element */
+}
+
+/* Styling for the carousel container */
+.carousel-container {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+/* Styling for the carousel itself */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Hide all images by default */
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: none;
+}
+
+/* Display the active image */
+.carousel img.active {
+  display: block;
+}
+
+/* Styling for carousel buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  background-color: rgba(253, 223, 234, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  transform: translateY(-50%);
+}
+
+.carousel-button:hover {
+  background-color: rgba(255, 137, 216, 0.8);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+h1 {
+  color: #ffffff; /* Example color (you can change it to any color you want) */
+  margin-bottom: -90px; /* Adjust the spacing below the h1 */
+}
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Websites</title>
+  <link rel="icon" href="./img/icon.png" type="image/png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="./img/logo.png" alt="Logo">
+    </div>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="about.html" class="nav-link">Profile</a>
+    </nav>
+  </header>
+  <div style="display: flex; justify-content: center; align-items: center; position: relative; padding: 20px;">
+    <img src="./img/websites.png" alt="Websites" style="height: 75px; margin: 0;">
+    <button onclick="window.location.href='projects.html';" 
+            style="position: absolute; right: 40px; background-color: #df5696; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px;">
+      Back
+    </button>
+  </div>
+
+    <!-- Toon Quizzer Carousel -->
+    <div class="carousel-section">
+        <h4 class="carousel-title">Toon Quizzer</h4>
+        <div class="carousel-container" id="carousel-toonquizzer">
+            <div class="carousel">
+                <img src="./img/toonquizzer1.png" alt="Image 1" class="active">
+                <img src="./img/toonquizzer2.png" alt="Image 2">
+                <img src="./img/toonquizzer3.png" alt="Image 3">
+                <img src="./img/toonquizzer4.png" alt="Image 4">
+                <img src="./img/toonquizzer5.png" alt="Image 5">
+                <img src="./img/toonquizzer6.png" alt="Image 6">
+            </div>
+            <button class="carousel-prev carousel-button" data-carousel="carousel-toonquizzer">&#10094;</button>
+            <button class="carousel-next carousel-button" data-carousel="carousel-toonquizzer">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- PEACHease Carousel -->
+    <div class="carousel-section">
+        <h4 class="carousel-title">PEACHease</h4>
+        <div class="carousel-container" id="carousel-peachease">
+            <div class="carousel">
+                <img src="./img/peachease1.png" alt="Image 1" class="active">
+                <img src="./img/peachease2.png" alt="Image 2">
+                <img src="./img/peachease3.png" alt="Image 3">
+                <img src="./img/peachease4.png" alt="Image 4">
+                <img src="./img/peachease5.png" alt="Image 5">
+                <img src="./img/peachease6.png" alt="Image 6">
+            </div>
+            <button class="carousel-prev carousel-button" data-carousel="carousel-peachease">&#10094;</button>
+            <button class="carousel-next carousel-button" data-carousel="carousel-peachease">&#10095;</button>
+        </div>
+    </div>
+
+    <div style="padding: 40px;">
+        <p></p>
+    </div>
+    
+  <script src="./js/main.js"></script>
+</body>
+</html>

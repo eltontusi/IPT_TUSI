@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Two Numbers & Toggle Theme</title>
+  <style>
+    /* Light and dark mode styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .light-mode {
+      background-color: #pink;
+      color: #000000;
+    }
+
+    .dark-mode {
+      background-color: #08061d;
+      color: #ffffff;
+    }
+
+    /* Styling for input, button, and result display */
+    .container {
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      width: calc(50% - 22px);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="light-mode">
+  <div class="container">
+    <h2>Add Two Numbers</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="addNumbers()">Add</button>
+    <div id="result"></div>
+
+    <h2>Toggle Theme</h2>
+    <button onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+  </div>
+
+  <script>
+    function addNumbers() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const result = num1 + num2;
+      document.getElementById('result').textContent = Result: ${result};
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+</html>
